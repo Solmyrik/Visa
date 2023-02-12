@@ -60,7 +60,7 @@
                 Оставьте заявку, и специалист по Италии нашего визового центра свяжется с Вами в
                 ближайшее время
               </p>
-              <div class="saluting__btnmob _btn">Отправить заявку</div>
+              <button data-popup="#popup" class="saluting__btnmob _btn">Отправить заявку</button>
             </div>
             <div class="saluting__bottom">
               <div class="saluting__item">
@@ -108,9 +108,37 @@
         </section>
       </main>
       <footer class="footer"></footer>
+
+      <div id="popup" aria-hidden="true" class="popup">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button data-close type="button" class="popup__close">
+              <img class="popup-icon-close" src="img/icon/close.svg" alt="close" />
+            </button>
+            <div class="popup__text">
+              <h4 class="form-saluting__title">Бесплатная консультация</h4>
+              <div class="form-saluting__subtitle">
+                Наш специалист свяжется с Вами в ближайшее время и ответит на все вопросы
+              </div>
+              <div class="form-saluting__inputs">
+                <input placeholder="Ваше имя" type="text" class="form-saluting__input _input" />
+                <input
+                  placeholder="Ваш номер телефона"
+                  type="tel"
+                  class="form-saluting__input _input"
+                  data-tel-input
+                />
+              </div>
+
+              <button class="form-saluting__btn _btn">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/main.js"></script>
     <script src="js/mask.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
