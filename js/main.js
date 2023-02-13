@@ -16,3 +16,21 @@ function ibg() {
   }
 }
 ibg();
+
+//types
+const typesItem = document.querySelectorAll('.types__item');
+
+typesItem.forEach((element) => {
+  element.addEventListener('click', clickTypes);
+});
+
+function clickTypes(e) {
+  if (e.target.classList.value.includes('active')) {
+    return;
+  } else {
+    typesItem.forEach((element) => {
+      element.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  }
+}
