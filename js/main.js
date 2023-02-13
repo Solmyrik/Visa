@@ -25,12 +25,13 @@ typesItem.forEach((element) => {
 });
 
 function clickTypes(e) {
+  console.log(e.currentTarget);
   if (e.target.classList.value.includes('active')) {
     return;
   } else {
     typesItem.forEach((element) => {
       element.classList.remove('active');
     });
-    e.target.classList.add('active');
+    e.currentTarget.classList.add('active');
   }
 }
