@@ -19,7 +19,7 @@ const flsModules = {};
 function FLS(message) {
   setTimeout(() => {
     if (window.FLS) {
-      console.log(message);
+      // console.log(message);
     }
   }, 0);
 }
@@ -591,8 +591,6 @@ function dataMediaQueries(array, dataSetValue) {
 function tabs() {
   const tabs = document.querySelectorAll('[data-tabs]');
   let tabsActiveHash = [];
-
-  console.log(tabs);
 
   if (tabs.length > 0) {
     const hash = getHash();

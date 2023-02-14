@@ -28,8 +28,8 @@
             <div class="menu__body">
               <ul class="menu__list">
                 <li class="menu__item"><a href="#types" class="menu__link">Типы виз</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Документы</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Опрос</a></li>
+                <li class="menu__item"><a href="#documents" class="menu__link">Документы</a></li>
+                <li class="menu__item"><a href="#quiz" class="menu__link">Опрос</a></li>
                 <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
               </ul>
             </div>
@@ -140,18 +140,18 @@
               </div>
             </div>
             <div class="types__btns">
-              <button class="types__btn _btn">Отправить заявку</button>
+              <button data-popup="#popup" class="types__btn _btn">Отправить заявку</button>
             </div>
           </div>
         </section>
-        <section class="documents">
+        <section id="documents" class="documents">
           <div class="documents__container">
             <h2 class="documents__title _title">Список документов для визы в Италию</h2>
             <div class="documents__subtitle _subtitle">
               Ниже расположен список основных документов, актуальный всегда, а также индивидуальный
               для каждого типа итальянской визы
             </div>
-            <div data-tabs="1150" data-tabs class="documents__body tabs">
+            <div data-tabs-animate="500" data-tabs="1150" data-tabs class="documents__body tabs">
               <div data-tabs-titles class="documents__triggers tabs__navigation">
                 <div class="documents__trigger active _tab-active">
                   <div class="documents__icon">
@@ -506,8 +506,104 @@
             </div> -->
           </div>
         </section>
+        <section id="quiz" class="quiz">
+          <div class="quiz__container">
+            <div class="quiz__block">
+              <h2 class="quiz__title _title">Оцените шансы на визу бесплатно</h2>
+              <div class="quiz__body">
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Тип визы</h4>
+                  <div class="quiz__choice choice">
+                    <div class="choice__item active">Туристическая</div>
+                    <div class="choice__item">Гостевая</div>
+                    <div class="choice__item">Студенческая</div>
+                    <div class="choice__item">Бизнес</div>
+                    <div class="choice__item">Другое</div>
+                  </div>
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Гражданство</h4>
+                  <input placeholder="Например, РФ" type="text" class="quiz__input _input" />
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Визы каких стран у вас были</h4>
+                  <input placeholder="Все через запятую" type="text" class="quiz__input _input" />
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Текущая занятость</h4>
+                  <div class="quiz__choice choice">
+                    <div class="choice__item active">Работаю в компании</div>
+                    <div class="choice__item">Ученик</div>
+                    <div class="choice__item">Студент</div>
+                    <div class="choice__item">Предприниматель</div>
+                    <div class="choice__item">Самозанятый</div>
+                    <div class="choice__item">Безработный</div>
+                    <div class="choice__item">Пенсионер</div>
+                  </div>
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Деньги на счету</h4>
+                  <input
+                    placeholder="Укажите сумму и валюту"
+                    type="text"
+                    class="quiz__input _input"
+                  />
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Были ли отказы ранее</h4>
+                  <div class="quiz__choice choice">
+                    <div class="choice__item">Да</div>
+                    <div class="choice__item active">Нет</div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz__bottom">
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Имя</h4>
+                  <input placeholder="Ваше имя" type="text" class="quiz__input _input" />
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">E-mail</h4>
+                  <input placeholder="Введите почту" type="text" class="quiz__input _input" />
+                </div>
+                <div class="quiz__item">
+                  <h4 class="quiz__name">Визы каких стран у вас были</h4>
+                  <input
+                    placeholder="Ваш номер"
+                    type="tel"
+                    class="quiz__input _input"
+                    data-tel-input
+                  />
+                </div>
+                <div class="quiz__item">
+                  <div class="quiz__btn _btn">Оценить шансы</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__top">
+            <a href="index.html" class="header__logo">
+              <img src="img/logo.svg" alt="logo" />
+            </a>
+            <div class="header__phones">
+              <a href="tel:+79588758153" class="header__phone"
+                ><p>+7 (958) 875 81 53</p>
+                <span><img src="img/icon/phone.svg" alt="phone" /></span
+              ></a>
+              <a href="tel:+79588759093" class="header__phone header__phone_mob"
+                >+7 (958) 875 90 93</a
+              >
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__copy">© 2023 Первый визовый центр. Все права защищены.</div>
+          </div>
+        </div>
+      </footer>
 
       <div id="popup" aria-hidden="true" class="popup">
         <div class="popup__wrapper">

@@ -1,11 +1,19 @@
 const iconMenu = document.querySelector('.header__burger');
+const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
-  const menuBody = document.querySelector('.menu__body');
   iconMenu.addEventListener('click', function (e) {
     iconMenu.classList.toggle('_active');
     menuBody.classList.toggle('_active');
   });
 }
+
+const listMenu = document.querySelector('.menu__list');
+listMenu.addEventListener('click', (e) => {
+  if (e.target.className === 'menu__link') {
+    iconMenu.classList.remove('_active');
+    menuBody.classList.remove('_active');
+  }
+});
 
 function ibg() {
   let ibg = document.querySelectorAll('.ibg');
@@ -34,4 +42,22 @@ function clickTypes(e) {
     });
     e.currentTarget.classList.add('active');
   }
+}
+
+// choice
+const choice = document.querySelectorAll('.choice');
+
+choice.forEach((ch) => {
+  onChoice(ch);
+});
+
+function onChoice(elem) {
+  elem.addEventListener('click', (e) => {
+    if (e.target.className === 'choice__item') {
+      for (const child of elem.children) {
+        child.classList.remove('active');
+      }
+      e.target.classList.add('active');
+    }
+  });
 }
